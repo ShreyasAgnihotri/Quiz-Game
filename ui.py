@@ -26,8 +26,6 @@ class QuizUi:
         self.false_image = Image.open('false.png')
         self.false_image = self.false_image.resize((100, 100))
         self.false_image = ImageTk.PhotoImage(self.false_image)
-        # self.true_image = PhotoImage(file="true.png")
-        # self.false_image = PhotoImage(file="false.png")
         self.button1 = Button(self.window,image=self.true_image,command=lambda t="True": self.checkAnswer(t))
         self.button1.place(x=60,y=350)
         self.button2 = Button(self.window,image=self.false_image,command=lambda t="False": self.checkAnswer(t))
@@ -68,4 +66,3 @@ class QuizUi:
             self.canvas.config(bg="red") 
         self.window.after(1000,self.get_question)
 
-# QuizUi()
